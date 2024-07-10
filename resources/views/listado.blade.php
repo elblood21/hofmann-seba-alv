@@ -15,7 +15,7 @@
                         <tr>
                             <td>{{$u['id']}}</td>
                             <td>{{$u['code']}}</td>
-                            <td>{{$u['amount']}}</td>
+                            <td>${{$u['amount_formatted']}}</td>
                             <td>{{$u['date_formatted']}}</td>
                             <td>
                                 <button type="button" onclick="editUser({{$u['id']}})" class="btn btn-primary">Editar</button>

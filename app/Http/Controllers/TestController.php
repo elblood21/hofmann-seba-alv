@@ -23,6 +23,7 @@ class TestController extends Controller
 
         $users = $peticion->json();
         foreach($users as &$u) {
+            $u['amount_formatted'] = number_format($u['amount'],0,"", ".");
             $u['date_formatted'] = date('d-m-Y',strtotime($u['date']));
         }
         return $users;
